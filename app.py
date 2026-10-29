@@ -41,7 +41,7 @@ print(calculate_total(prices))
 
 def get_saved_openrouter_api_key() -> str:
     try:
-        secret_value = st.secrets.get("OPENROUTER_API_KEY", "")
+        secret_value = st.secrets["OPENROUTER_API_KEY"]
     except Exception:
         return ""
     if secret_value is None:
